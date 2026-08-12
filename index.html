@@ -79,6 +79,33 @@
            <span id="erro-cidade" class="mensagem-erro" role="alert" aria-live="assertive"></span>
         
         </div>
+
+         <h3>Tipo de Atração</h3>
+        <div class="campo-container">
+            <label for="selecao-atracao">
+                Escolha o tipo de atração: <span class="obrigatorio" aria-hidden="true"></span>
+            </label>
+        <select 
+        id="selecao-atracao"
+        name="atracao"
+        required
+        aria-required="true"
+        aria-describedby="dica-atracao erro-atracao">
+            <option value=""disabled selected>selecione uma opção...</option>
+            <option value="">Ontário</option>
+            <option value="">Quebec</option>
+            <option value="">Colúmbia Britânica</option>
+            <option value="">Alberta</option>
+            <option value="">Manitoba</option>
+            <option value="">Saskatchewan</option>
+            <option value="">Nova Escócia</option>
+            <option value="">Novo Brunswick</option>
+            <option value="">Ilha do Príncipe Eduardo</option>
+            <option value="">Labrador e Terra Nova</option>
+            </select>
+           <span id="erro-atracao" class="mensagem-erro" role="alert" aria-live="assertive"></span>
+        
+        </div>
     </section>
 
 </main>

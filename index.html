@@ -5,13 +5,68 @@
 </head>
 
 <header class="header-acessivel">
-    <div class="top-bar"> 
+    <!--barra superior de acessibilidade e status-->
+    <div class="top-barra"> 
+    <!--Campo de busca/entrada superior-->
     <div class="campo-superior-container">
     <label for="input-topo" class="sr-only">Pesquisa rápida</label>
     <input type="text" id="input-topo" class="input-topo" placeholder="Digite para buscar...">
     </div>
     <div class="status-leitor" role="status" aria-livre="polite">
-        <span>Leitor de Tela Ativado</span>
+        <span>Leitor de Tela Ativo</span>
+    </div>
+    <div class="ferramentas-barra">
+        <!--alternador de contraste-->
+    <button type="button" class="btn-ferramenta" aria-pressed="true" id="btn-contraste">
+      Alto Contraste: Ativado</button>
+      <!--Controle de tamanho da fonte-->
+      <fieldset class="grupo-fonte">
+        <legend class="legenda-fonte">Fonte:</legend>
+      <!-- Diminuir Fonte -->
+      <button type="button" class="btn-fonte btn-fonte-ativo" aria-label="Diminuir tamanho da fonte">
+        A-
+      </button>
+      <!--restaurar fonte padrao-->
+      <button type="button" class="btn-fonte" aria-label="tamanho de fonte normal"> A </button>
+      <!--Aumentar Fonte-->
+      <button type="button" class="btn-fonte btn-fonte-destaque" aria-label="Aumentar tamanho da fonte">
+        A+
+      </button>
+      </fieldset>
+      <!--Seleção de Idioma (Direita)-->
+    <nav class="seletor-idioma" aria-label="Seletor de Idioma">
+      <ul>
+        <!--Português-->
+        <li>
+          <button type="button" class="btn-idioma" aria-current="true" lang="pt">PT</button>
+        </li>
+        <!--Inglês-->
+        <li>
+          <button type="button" class="btn-idioma btn-idioma-ativo" lang="en">EN</button>
+        </li>
+        <!--Francês-->
+        <li>
+          <button type="button" class="btn-idioma btn-idioma-ativo" lang="fr">FR</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!--MENU DE NAVEGAÇÃO PRINCIPAL [nav] -->
+  <nav class="menu-navegacao" aria-label="Menu Principal">
+    
+    <span class="tag-nav-indicador" aria-hidden="true">[nav] Menu</span>
+
+    <ul class="links-menu">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#destinos" class="link-destaque">Destinos</a></li>
+      <li><a href="#busca">Busca</a></li>
+      <li><a href="#dicas" class="link-sublinhado">Dicas de Acessibilidade</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+
     </div>
 <nav menu> 
     <ul>

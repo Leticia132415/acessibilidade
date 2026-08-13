@@ -1,218 +1,200 @@
-<html>
+<html lang="pt-BR">
 <head>
-    <title> Guia Turístico Acessível do Canadá </title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Turístico Acessível do Canadá</title>
 </head>
+<body>
 
 <header class="header-acessivel">
-    <!--barra superior de acessibilidade e status-->
+    <!--Barra superior de acessibilidade e status-->
     <div class="top-barra"> 
-    <!--Campo de busca/entrada superior-->
-    <div class="campo-superior-container">
-    <label for="input-topo" class="sr-only">Pesquisa rápida</label>
-    <input type="text" id="input-topo" class="input-topo" placeholder="Digite para buscar...">
-    </div>
-    <div class="status-leitor" role="status" aria-livre="polite">
-        <span>Leitor de Tela Ativo</span>
-    </div>
+        <!--Campo de busca/entrada superior-->
+        <div class="campo-superior-container">
+            <label for="input-topo" class="sr-only">Pesquisa rápida</label>
+            <input type="text" id="input-topo" class="input-topo" placeholder="Digite para buscar...">
+        </div>
+
+        <!-- Corrigido de aria-livre para aria-live -->
+        <div class="status-leitor" role="status" aria-live="polite">
+            <span>Leitor de Tela Ativo</span>
+        </div>
+    </div> <!--Fechamento da top-barra ajustado-->
+
     <div class="ferramentas-barra">
-        <!--alternador de contraste-->
-    <button type="button" class="btn-ferramenta" aria-pressed="true" id="btn-contraste">
-      Alto Contraste: Ativado</button>
-      <!--Controle de tamanho da fonte-->
-      <fieldset class="grupo-fonte">
-        <legend class="legenda-fonte">Fonte:</legend>
-      <!-- Diminuir Fonte -->
-      <button type="button" class="btn-fonte btn-fonte-ativo" aria-label="Diminuir tamanho da fonte">
-        A-
-      </button>
-      <!--restaurar fonte padrao-->
-      <button type="button" class="btn-fonte" aria-label="tamanho de fonte normal"> A </button>
-      <!--Aumentar Fonte-->
-      <button type="button" class="btn-fonte btn-fonte-destaque" aria-label="Aumentar tamanho da fonte">
-        A+
-      </button>
-      </fieldset>
-      <!--Seleção de Idioma (Direita)-->
-    <nav class="seletor-idioma" aria-label="Seletor de Idioma">
-      <ul>
-        <!--Português-->
-        <li>
-          <button type="button" class="btn-idioma" aria-current="true" lang="pt">PT</button>
-        </li>
-        <!--Inglês-->
-        <li>
-          <button type="button" class="btn-idioma btn-idioma-ativo" lang="en">EN</button>
-        </li>
-        <!--Francês-->
-        <li>
-          <button type="button" class="btn-idioma btn-idioma-ativo" lang="fr">FR</button>
-        </li>
-      </ul>
+        <!--Alternador de contraste-->
+        <button type="button" class="btn-ferramenta" aria-pressed="true" id="btn-contraste">
+            Alto Contraste: Ativado
+        </button>
+
+        <!--Controle de tamanho da fonte-->
+        <fieldset class="grupo-fonte">
+            <legend class="legenda-fonte">Fonte:</legend>
+            <!-- Diminuir Fonte -->
+            <button type="button" class="btn-fonte btn-fonte-ativo" aria-label="Diminuir tamanho da fonte">A-</button>
+            <!-- Restaurar fonte padrao -->
+            <button type="button" class="btn-fonte" aria-label="Tamanho de fonte normal">A</button>
+            <!-- Aumentar Fonte -->
+            <button type="button" class="btn-fonte btn-fonte-destaque" aria-label="Aumentar tamanho da fonte">A+</button>
+        </fieldset>
+
+        <!--Seleção de Idioma-->
+        <nav class="seletor-idioma" aria-label="Seletor de Idioma">
+            <ul>
+                <li><button type="button" class="btn-idioma" aria-current="true" lang="pt">PT</button></li>
+                <li><button type="button" class="btn-idioma btn-idioma-ativo" lang="en">EN</button></li>
+                <li><button type="button" class="btn-idioma btn-idioma-ativo" lang="fr">FR</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--Menu principal-->
+    <nav class="menu-navegacao" aria-label="Menu Principal">
+        <span class="tag-nav-indicador" aria-hidden="true">[nav] Menu</span>
+        <ul class="links-menu">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#destinos" class="link-destaque">Destinos</a></li>
+            <li><a href="#busca">Busca</a></li>
+            <li><a href="#dicas" class="link-sublinhado">Dicas de Acessibilidade</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
     </nav>
-  </div>
-
-  <!--menu principal-->
-  <nav class="menu-navegacao" aria-label="Menu Principal">
-    
-    <span class="tag-nav-indicador" aria-hidden="true">Menu</span>
-
-    <ul class="links-menu">
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#destinos" class="link-destaque">Destinos</a></li>
-      <li><a href="#busca">Busca</a></li>
-      <li><a href="#dicas" class="link-sublinhado">Dicas de Acessibilidade</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
 </header>
 
 <main>
     <h1>Guia Turístico Acessível do Canadá</h1>
-    <p>Explore o Canadá com total independência. Todas as informações desta página são estruturadas e otimizadas para leitores de tela profissionais (NVDA, JAWS e TalkBack.)</p>
-    <img src="https://i.pinimg.com/1200x/4f/c0/50/4fc050ccb163dee4e77d1ed237f5f54c.jpg" alt="A imagem retrata o Lago Moraine (Moraine Lake), situado no Parque Nacional de Banff, nas Montanhas Rochosas canadenses, durante a transição da primavera para o verão (momento de descongelamento).">
+    <p>Explore o Canadá com total independência. Todas as informações desta página são estruturadas e otimizadas para leitores de tela profissionais (NVDA, JAWS e TalkBack).</p>
+    
+    <img src="https://i.pinimg.com/1200x/4f/c0/50/4fc050ccb163dee4e77d1ed237f5f54c.jpg" alt="Lago Moraine (Moraine Lake), no Parque Nacional de Banff, com águas cristalinas cercadas por montanhas rochosas durante o descongelamento.">
+    
     <button type="button">Explorar Destinos</button>
+
     <!--Principais Destinos-->
-    <section>
-    <h2>Principais Destinos</h2>
-    <h3>Toronto</h3>
-    <p>Metróple vibrante com transporte 100% acessível e autodescrição na CN Tower.</p>
-    <button type="button" aria-label="Conhecer atrações e acessibilidade em Toronto"> Conhecer atrações em Toronto</button>
-    <h3>Vancouver</h3>
-    <p>Parques naturais majestosos com trilhas adaptadas e guias táteis em áudio.</p>
-    <button type="button" aria-label="Conhecer atrações e acessibilidade em Vancouver"> Conhecer atrações em Vancouver</button>
-    <h3>Montreal</h3>
-    <p>Riqueza histórica com calçadas adaptadas e áudio guia nos principais museus.</p>
-     <button type="button" aria-label="Conhecer atrações e acessibilidade em Montreal"> Conhecer atrações em Montreal</button>
-    <h3>Banff</h3>
-    <p>Parque nacional com mirantes acessíveis e autodescrição da vida selvagem.</p>
-    <button type="button" aria-label="Conhecer atrações e acessibilidade em Banff"> Conhecer atrações em Banff</button>
+    <section id="destinos">
+        <h2>Principais Destinos</h2>
+        
+        <h3>Toronto</h3>
+        <p>Metrópole vibrante com transporte 100% acessível e autodescrição na CN Tower.</p>
+        <button type="button" aria-label="Conhecer atrações e acessibilidade em Toronto">Conhecer atrações em Toronto</button>
+
+        <h3>Vancouver</h3>
+        <p>Parques naturais majestosos com trilhas adaptadas e guias táteis em áudio.</p>
+        <button type="button" aria-label="Conhecer atrações e acessibilidade em Vancouver">Conhecer atrações em Vancouver</button>
+
+        <h3>Montreal</h3>
+        <p>Riqueza histórica com calçadas adaptadas e áudio guia nos principais museus.</p>
+        <button type="button" aria-label="Conhecer atrações e acessibilidade em Montreal">Conhecer atrações em Montreal</button>
+
+        <h3>Banff</h3>
+        <p>Parque nacional com mirantes acessíveis e autodescrição da vida selvagem.</p>
+        <button type="button" aria-label="Conhecer atrações e acessibilidade em Banff">Conhecer atrações em Banff</button>
     </section>
+
     <!--Dicas de Acessibilidade de Viagem-->
-    <section>
+    <section id="dicas">
         <h2>Dicas de Acessibilidade de Viagem</h2>
         <h3>Transporte Público Acessível</h3>
         <p>Metrôs e ônibus com audiodescrição ativa das estações em Toronto, Vancouver e Montreal.</p>
+        
         <h3>Cão-Guia na Legislação</h3>
-        <p>A legislação canadenses garante o livre acesso de cães-guias em todos os hotéis, restaurantes, estabelecimentos e transportes públicos.</p>
+        <p>A legislação canadense garante o livre acesso de cães-guias em todos os hotéis, restaurantes, estabelecimentos e transportes públicos.</p>
+        
         <h3>Audiodescrição em Atrações</h3>
-        <p>A grande maioria dos museus federais e parques nacionais oferece dispositivos de áudio com audiodescrição detalhada ao acervo físico e das paisagens.</p>
+        <p>A grande maioria dos museus federais e parques nacionais oferece dispositivos de áudio com audiodescrição detalhada do acervo físico e das paisagens.</p>
     </section>
+
     <!--Buscar Atrações Acessíveis-->
-    <section>
+    <section id="busca">
         <h2>Buscar Atrações Acessíveis</h2>
-        <h3>Campo de pesquisa por cidade do Canadá. Digite o nome da cidade:</h3>
-        <label for="Digite aqui a cidade desejada do Canadá"></label>
-        <input type="text" id="cidade" name="text" placeholder="Digite aqui ex: Vancouver..." >
-        <h3>Filtrar por Província</h3>
+        
+        <!--Campo de cidade corrigido-->
+        <div class="campo-container">
+            <label for="cidade">Digite o nome da cidade do Canadá:</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Ex: Vancouver...">
+        </div>
+
+        <!--Filtrar por Província-->
         <div class="campo-container">
             <label for="selecao-provincia">
-                Escolha a província desejada: <span class="obrigatorio" aria-hidden="true"></span>
+                Escolha a província desejada: <span class="obrigatorio" aria-hidden="true">*</span>
             </label>
-        <select 
-        id="selecao-provincia"
-        name="provincia"
-        required
-        aria-required="true"
-        aria-describedby="dica-provincia erro-provincia">
-            <option value=""disabled selected>selecione uma opção...</option>
-            <option value="">Ontário</option>
-            <option value="">Quebec</option>
-            <option value="">Colúmbia Britânica</option>
-            <option value="">Alberta</option>
-            <option value="">Manitoba</option>
-            <option value="">Saskatchewan</option>
-            <option value="">Nova Escócia</option>
-            <option value="">Novo Brunswick</option>
-            <option value="">Ilha do Príncipe Eduardo</option>
-            <option value="">Labrador e Terra Nova</option>
+            <select id="selecao-provincia" name="provincia" required aria-required="true" aria-describedby="erro-provincia">
+                <option value="" disabled selected>Selecione uma opção...</option>
+                <option value="ontario">Ontário</option>
+                <option value="quebec">Quebec</option>
+                <option value="columbia-britanica">Colúmbia Britânica</option>
+                <option value="alberta">Alberta</option>
+                <option value="manitoba">Manitoba</option>
+                <option value="saskatchewan">Saskatchewan</option>
+                <option value="nova-escosia">Nova Escócia</option>
+                <option value="novo-brunswick">Novo Brunswick</option>
+                <option value="príncipe-eduardo">Ilha do Príncipe Eduardo</option>
+                <option value="terra-nova-labrador">Labrador e Terra Nova</option>
             </select>
-           <span id="erro-cidade" class="mensagem-erro" role="alert" aria-live="assertive"></span>
-           <button type="button">Buscar Atrações</button>
+            <span id="erro-provincia" class="mensagem-erro" role="alert" aria-live="assertive"></span>
         </div>
 
-         <h3>Tipo de Atração</h3>
+        <!--Tipo de Atração-->
         <div class="campo-container">
             <label for="selecao-atracao">
-                Escolha o tipo de atração: <span class="obrigatorio" aria-hidden="true"></span>
+                Escolha o tipo de atração: <span class="obrigatorio" aria-hidden="true">*</span>
             </label>
-        <select 
-        id="selecao-atracao"
-        name="atracao"
-        required
-        aria-required="true"
-        aria-describedby="dica-atracao erro-atracao">
-            <option value=""disabled selected>selecione uma opção...</option>
-            <option value="">Stanley Park - Vancouver</option>
-            <option value="">Capilano Suspension Bridge Park - North Vancouver</option>
-            <option value="">Lago Louise e Banff - Parque Nacional de Banff</option>
-            <option value="">Royal Tyrrell Museum - Drumheller</option>
-            <option value="">Remai Modern - Saskatoon</option>
-            <option value="">Wanuskewin Heritage Park</option>
-            <option value="">Canadian Museum for Human Rights - Winnipeg</option>
-            <option value="">Assiniboine Park Zoo</option>
-            <option value="">Niagara Parks & Niágara Falls - Niagara Falls</option>
-            <option value="">CN Tower - Toronto</option>
-            <option value="">Musée de la Civilisation - Cidade de Quebec</option>
-            <option value="">Jardin Botanique de Montréal - Montreal</option>
-            <option value="">Hopewell Rocks / Baía de Fundy</option>
-            <option value="">Parque Nacional Fundy</option>
-            <option value="">Fortaleza de Louisbourg - Cape Breton</option>
-            <option value="">Halifax Waterfront Boardwalk</option>
-            <option value="">Green Gables Heritage Place - Cavendish</option>
-            <option value="">Parque Nacional PEI</option>
-            <option value="">Signal Hill National Historic Site & Johnson Geo Centre - St. John's</option>
-            <option value="">Gros Morne National Park</option>
+            <select id="selecao-atracao" name="atracao" required aria-required="true" aria-describedby="erro-atracao">
+                <option value="" disabled selected>Selecione uma opção...</option>
+                <option value="stanley-park">Stanley Park - Vancouver</option>
+                <option value="capilano-bridge">Capilano Suspension Bridge Park - North Vancouver</option>
+                <option value="lago-louise">Lago Louise e Banff - Parque Nacional de Banff</option>
+                <option value="royal-tyrrell">Royal Tyrrell Museum - Drumheller</option>
+                <option value="remai-modern">Remai Modern - Saskatoon</option>
+                <option value="wanuskewin">Wanuskewin Heritage Park</option>
+                <option value="human-rights-museum">Canadian Museum for Human Rights - Winnipeg</option>
+                <option value="assiniboine-zoo">Assiniboine Park Zoo</option>
+                <option value="niagara-falls">Niagara Parks & Niágara Falls - Niagara Falls</option>
+                <option value="cn-tower">CN Tower - Toronto</option>
+                <option value="musee-civilisation">Musée de la Civilisation - Cidade de Quebec</option>
+                <option value="jardin-botanique">Jardin Botanique de Montréal - Montreal</option>
+                <option value="hopewell-rocks">Hopewell Rocks / Baía de Fundy</option>
+                <option value="fundy-national-park">Parque Nacional Fundy</option>
+                <option value="louisbourg">Fortaleza de Louisbourg - Cape Breton</option>
+                <option value="halifax-boardwalk">Halifax Waterfront Boardwalk</option>
+                <option value="green-gables">Green Gables Heritage Place - Cavendish</option>
+                <option value="pei-national-park">Parque Nacional PEI</option>
+                <option value="signal-hill">Signal Hill National Historic Site & Johnson Geo Centre - St. John's</option>
+                <option value="gros-morne">Gros Morne National Park</option>
             </select>
-           <span id="erro-atracao" class="mensagem-erro" role="alert" aria-live="assertive"></span>
-        
+            <span id="erro-atracao" class="mensagem-erro" role="alert" aria-live="assertive"></span>
         </div>
+
+        <button type="button">Buscar Atrações</button>
     </section>
-
 </main>
+
 <footer class="rodape-site">
-  <div class="rodape-container">
-    <div class="cabecalho-rodape">
-      <span class="tag-h2-indicador" aria-hidden="true"></span>
-      <h2>Informações e Acessibilidade</h2>
+    <div class="rodape-container">
+        <div class="cabecalho-rodape">
+            <span class="tag-h2-indicador" aria-hidden="true">[h2] Rodapé</span>
+            <h2>Informações e Acessibilidade</h2>
+        </div>
+
+        <nav class="menu-rodape" aria-label="Links de Acessibilidade e Informações">
+            <ul>
+                <li><a href="#politica-acessibilidade">Política de Acessibilidade do Portal</a></li>
+                <li><a href="#declaracao-wcag">Declaração de Conformidade WCAG 2.1 AAA</a></li>
+                <li><a href="#feedback-usabilidade">Formulário de Feedback de Usabilidade para Leitores de Tela</a></li>
+                <li><a href="#mapa-site">Mapa do Site Completo</a></li>
+            </ul>
+        </nav>
+
+        <hr class="divisor-rodape" aria-hidden="true">
+
+        <div class="rodape-inferior">
+            <p class="copyright">&copy; 2024 Guia Turístico Acessível do Canadá. Todos os direitos reservados.</p>
+            <div class="selo-conformidade" role="img" aria-label="Selo de conformidade: WCAG 2.1 AAA Compliant">
+                <span>WCAG 2.1 AAA Compliant</span>
+            </div>
+        </div>
     </div>
-
-    <!--links-->
-    <nav class="menu-rodape" aria-label="Links de Acessibilidade e Informações">
-      <ul>
-        <li>
-          <a href="#politica-acessibilidade">Política de Acessibilidade do Portal</a>
-        </li>
-        <li>
-          <a href="#declaracao-wcag">Declaração de Conformidade WCAG 2.1 AAA</a>
-        </li>
-        <li>
-          <a href="#feedback-usabilidade">Formulário de Feedback de Usabilidade para Leitores de Tela</a>
-        </li>
-        <li>
-          <a href="#mapa-site">Mapa do Site Completo</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!--linha divisoria-->
-    <hr class="divisor-rodape" aria-hidden="true">
-
-    <!--rodape inferior-->
-    <div class="rodape-inferior">
-      <p class="copyright">
-        &copy; 2024 Guia Turístico Acessível do Canadá. Todos os direitos reservados.
-      </p>
-
-      <!--Selo WCAG-->
-      <div class="selo-conformidade" role="img" aria-label="Selo de conformidade: WCAG 2.1 AAA Compliant">
-        <span>WCAG 2.1 AAA Compliant</span>
-      </div>
-    </div>
-
-  </div>
 </footer>
 
-
-
+</body>
 </html>

@@ -1,0 +1,252 @@
+/* ==========================================================================
+   1. VARIÁVEIS E BASE
+   ========================================================================== */
+:root {
+  --bg-primary: #fff8f8;
+  --bg-surface: #ffffff;
+  --bg-brand: #8b0000;
+  --text-primary: #1a1a1a;
+  --text-brand: #8b0000;
+  --text-on-brand: #ffffff;
+  --border-color: #8b0000;
+  --focus-ring: #005fcc;
+  --error-bg: #ffe6e6;
+  --error-text: #990000;
+  --font-main: system-ui, -apple-system, sans-serif;
+}
+
+body.high-contrast {
+  --bg-primary: #000000;
+  --bg-surface: #000000;
+  --bg-brand: #000000;
+  --text-primary: #ffff00;
+  --text-brand: #ffff00;
+  --text-on-brand: #ffff00;
+  --border-color: #ffffff;
+  --focus-ring: #00ffff;
+  --error-bg: #000000;
+  --error-text: #ff0000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   2. ACESSIBILIDADE (TECLADO E LEITORES DE TELA)
+   ========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: auto;
+  clip: auto;
+  white-space: normal;
+  padding: 1rem;
+  background: #fff;
+  color: #000;
+  border: 3px solid var(--focus-ring);
+  z-index: 9999;
+}
+
+:focus-visible {
+  outline: 4px solid var(--focus-ring) !important;
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+header, footer {
+  background-color: var(--bg-brand);
+  color: var(--text-on-brand);
+  padding: 1rem;
+}
+
+header div[role="region"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header button,
+header nav a {
+  background-color: var(--bg-surface);
+  color: var(--text-brand);
+  border: 2px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+header nav ul, footer ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+header nav[aria-label="Menu principal"] ul {
+  justify-content: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+header nav[aria-label="Menu principal"] a {
+  background-color: transparent;
+  color: var(--text-on-brand);
+  border-color: var(--text-on-brand);
+}
+
+header nav[aria-label="Menu principal"] a[aria-current="page"] {
+  background-color: var(--bg-surface);
+  color: var(--text-brand);
+}
+
+/* ==========================================================================
+   4. ESTRUTURA PRINCIPAL E CARDS
+   ========================================================================== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h1, h2, h3 { color: var(--text-brand); margin-bottom: 1rem; }
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.4rem; }
+
+figure img, article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  margin: 1rem 0;
+}
+
+#destinos > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+article, form {
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn, article a, form button[type="submit"] {
+  display: inline-block;
+  background-color: var(--bg-brand);
+  color: var(--text-on-brand);
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid var(--border-color);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* ==========================================================================
+   5. FORMULÁRIO, ERROS E RODAPÉ
+   ========================================================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label { font-weight: bold; }
+
+input, select {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+#erro-formulario {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  border: 2px solid var(--error-text);
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+footer {
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
+
+footer h2, footer a { color: var(--text-on-brand); }
+
+footer ul {
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+footer a {
+  text-decoration: underline;
+  line-height: 2;
+}
+
+footer div {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
